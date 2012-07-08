@@ -224,6 +224,8 @@ slink /sdcard /mnt/sdcard 0755 0 0
 file /sbin/adbd  /home/user/cm7-kernel/initramfs/./sbin/adbd 6755 0 0
 file /sbin/sh  /home/user/cm7-kernel/initramfs/./sbin/sh 0755 0 0
 file /sbin/adbd /home/user/cm7-kernel/initramfs/sbin/adbd 755 0 0
+file /sbin/busybox /home/user/cm7-kernel/initramfs/sbin/busybox 755 0 0
+file /sbin/busyboxr.sh /home/user/cm7-kernel/initramfs/sbin/busyboxr.sh 755 0 0
 
 #file /sbin/flash_image /home/cm7-kernel/initramfs/sbin/flash_image 755 0 0
 file /sbin/su /home/user/cm7-kernel/initramfs/sbin/su 6755 0 0
