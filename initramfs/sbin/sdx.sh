@@ -30,7 +30,12 @@ if [ ! -f "/system/etc/group" ]; then
 fi
 /system/bin/mount -o remount,ro /dev/stl5 /system
 
-#provide support script to deny or allow root access 
+#provide support script to assume direct control
 if [ -r "/system/protectsu.sh" ]; then
   /system/bin/sh /system/xbin/su 
+fi
+
+#prevents recovery from updating on its own
+if [ -r "/system/etc/install-recovery.sh" ]; then
+ rm /system/etc/install-recovery.sh
 fi
