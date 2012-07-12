@@ -14,6 +14,10 @@
 /system/bin/ln -s /sbin/busybox /system/bin/route
 /system/bin/ln -s /sbin/busybox /system/xbin/route
 /sbin/busybox install -s
+
+#Resets su perms
+chmod 4775 /sbin/su
+
 # fix busybox DNS while system is read-write
 if [ ! -f "/system/etc/resolv.conf" ]; then
   echo "nameserver 8.8.8.8" >> /system/etc/resolv.conf
